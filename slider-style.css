@@ -1,0 +1,259 @@
+ /* HASIL PRODUK */
+
+
+    .produk-header {
+        max-width: 900px;
+        width: 100%;
+        margin: 5rem auto 0 auto;
+        text-align: left;
+    }
+
+
+    .produk-header h5 {
+        font-size: 15px;
+        color: #888;
+        letter-spacing: 1px;
+        margin-bottom: 8px;
+        font-family: "Poppins", sans-serif;
+    }
+
+    .produk-header h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        font-weight: bold;
+        font-family: "Poppins", sans-serif;
+
+    }
+
+    .produk-header p {
+        font-size: 16px;
+        color: #444;
+        line-height: 1.6;
+        font-family: "Poppins", sans-serif;
+    }
+
+
+
+    .produk-grid-container {
+        margin-top: 5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    .produk-row-three {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .produk-row-one {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .produk-row-three .produk-card {
+        position: relative;
+        width: 330px;
+        height: 430px;
+        /* Potrait */
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+    }
+
+    .produk-row-one .produk-card {
+        position: relative;
+        width: 730px;
+        height: 400px;
+        /* Potrait */
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+    }
+
+    .produk-row-three .produk-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+        
+    }
+
+    .produk-row-one .produk-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+        
+    }
+
+    .produk-card:hover img {
+        transform: scale(1.1);
+    }
+
+    .produk-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        transition: background 0.3s ease;
+        background: rgba(0, 0, 0, 0.4);
+    }
+
+    .produk-card:hover .produk-overlay {
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+    .produk-card-text {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        color: white;
+        z-index: 2;
+        font-family: "Poppins", sans-serif;
+    }
+
+    .produk-card-text h3 {
+        font-size: 25px;
+        margin-bottom: 5px;
+    }
+
+    .produk-card-text p {
+        font-size: 15px;
+    }
+
+    
+
+    @media only screen and (max-width: 1025px) {
+        
+        /* HASIL PRODUK */
+
+         .produk-row-one .produk-card{
+        width: 530px;
+        height: 300px;
+    }
+
+    .produk-row-three .produk-card {
+        width: 240px;
+        height: 340px;
+    }
+
+    .produk-card {
+        width: 230px;
+        height: 330px;
+    }
+.produk-header {
+        max-width: 600px;
+    }
+
+    .produk-card {
+        width: 230px;
+        height: 330;
+    }
+
+    .step {
+        flex: 1 1 45%;
+        /* 2 kolom */
+        max-width: none;
+
+    }
+    }
+
+    @media only screen and (max-width: 768px) {
+        
+    /*HASIL PRODUK*/
+   .produk-row {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .produk-card {
+        width: 75vw;
+        height: 40vw;
+    }
+
+    .produk-header h2 {
+        font-size: 22px;
+    }
+
+    .produk-header p {
+        font-size: 14px;
+    }
+
+    /*HASIL PRODUK*/
+    .produk-row-three {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .produk-row-three .produk-card {
+        width: 70vw;
+        height: 40vw;
+    }
+
+    .produk-row-one {
+        align-items: center;
+    }
+
+    .produk-row-one .produk-card {
+        width: 70vw;
+        height: 40vw;
+    }
+
+    .produk-row {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .produk-card {
+        width: 75vw;
+        height: 40vw;
+    }
+
+    .produk-header h2 {
+        font-size: 22px;
+    }
+
+    .produk-header p {
+        font-size: 14px;
+    }
+    }
+
+    @media only screen and (max-width: 425px) {
+               /*HASIL PRODUK*/
+    .produk-header {
+        max-width: 90%;
+        text-align: left;
+        /* atau center jika diinginkan */
+        margin: 2rem auto;
+    }
+
+    .produk-header h5 {
+        font-size: 13px;
+    }
+
+    .produk-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .produk-header p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .produk-card-text h3 {
+        font-size: 17px;
+    }
+
+    .produk-card-text p {
+        font-size: 12px;
+    }
+    }

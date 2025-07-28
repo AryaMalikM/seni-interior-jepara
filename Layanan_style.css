@@ -1,0 +1,843 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+html,
+body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    background-color: white;
+    justify-content: center;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* NAVIGATION */
+
+.navbar-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background: transparent;
+}
+
+.logo {
+    margin-left: 300px;
+}
+
+.logo img {
+    display: flex;
+    width: 90px;
+    align-items: center;
+}
+
+.text-logo {
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.navbar .navbar-ul {
+    list-style: none;
+    margin: 0 1rem;
+    padding: 30px;
+    align-items: center;
+    display: flex;
+    margin-right: 200px;
+}
+
+.navbar .navbar-ul .navbar-li {
+    margin-right: 20px;
+}
+
+.navbar .navbar-link {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-family: "Poetsen One", sans-serif;
+
+}
+
+.navbar .navbar-ul .navbar-li .navbar-link {
+    position: relative;
+    padding-bottom: 50px;
+    overflow: hidden;
+    padding: 30px 20px;
+    opacity: 70%;
+    transition: all 0.5s ease-in-out;
+
+}
+
+.navbar .navbar-ul .navbar-li .navbar-link::before {
+    content: " ";
+    position: relative;
+    left: -20px;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #4f7942;
+    transition: all 0.5s ease-in-out;
+}
+
+.navbar .navbar-ul .navbar-li .navbar-link:hover::before {
+    left: 0;
+    position: absolute;
+}
+
+.navbar .navbar-ul .navbar-li .navbar-link:hover {
+    opacity: 100%;
+}
+
+
+
+.navbar .navbar-ul .navbar-li .active::before {
+    content: " ";
+    position: absolute;
+    left: 0px;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #4f7942;
+    transition: all 0.5s ease-in-out;
+}
+
+.navbar .navbar-ul .navbar-li .active {
+    opacity: 100%;
+}
+
+.menu-icon {
+    display: none;
+}
+
+/*RESPONSIVE NAVIGATION BAR*/
+.reponsive-navbar ul {
+    display: none;
+}
+
+.reponsive-navbar .hidden {
+    display: none;
+}
+
+/* MAIN BOARD */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+}
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 505px;
+    /* tinggi area gambar */
+    overflow: hidden;
+
+}
+
+.hero-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    /* warna hitam semi transparan */
+    z-index: 1;
+
+}
+
+.hero-content {
+    position: absolute;
+    top: 70%;
+    left: 20%;
+    transform: translateY(-50%);
+    color: white;
+    z-index: 2;
+}
+
+.hero-content button {
+    margin-top: 10px;
+    padding: 15px 40px;
+    background-color: hwb(106 26% 53%);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: .9rem;
+}
+
+.section-karya {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+.karya-text h5 {
+    color: #555;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    font-family: "Poppins", sans-serif;
+}
+
+.karya-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-family: "Poppins", sans-serif;
+}
+
+.karya-text p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-family: "Poppins", sans-serif;
+}
+
+.karya-text button {
+    background-color: #00bfa6;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.karya-image {
+    margin-left: 10rem;
+    margin-right: 2rem;
+}
+
+.karya-image img {
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    width: 500px;
+    height: 350px;
+    /* Atur tinggi sesuai kebutuhan */
+    display: block;
+    object-fit: cover;
+}
+
+.garis-lengkung {
+    width: 100%;
+    height: 80px;
+    background-color: transparent;
+    border-bottom: 5px solid #4f7942;
+    /* warna hijau */
+    border-radius: 0 0 50% 50%;
+
+/* HASIL PRODUK */
+}
+
+.produk-header {
+    max-width: 900px;
+    width: 100%;
+    margin: 5rem auto 0 auto;
+    text-align: left;
+}
+
+
+.produk-header h5 {
+    font-size: 15px;
+    color: #888;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    font-family: "Poppins", sans-serif;
+}
+
+.produk-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+
+}
+
+.produk-header p {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.6;
+    font-family: "Poppins", sans-serif;
+}
+
+
+
+.produk-grid-container {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    overflow-y: hidden;
+}
+
+.produk-row-three {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.produk-row-one {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.produk-row-three .produk-card {
+    position: relative;
+    width: 330px;
+    height: 430px;
+    /* Potrait */
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.produk-row-one .produk-card {
+    position: relative;
+    width: 730px;
+    height: 400px;
+    /* Potrait */
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.produk-row-three .produk-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    
+}
+
+.produk-row-one .produk-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    
+}
+
+.produk-card:hover img {
+    transform: scale(1.1);
+}
+
+.produk-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: background 0.3s ease;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.produk-card:hover .produk-overlay {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.produk-card-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    color: white;
+    z-index: 2;
+    font-family: "Poppins", sans-serif;
+}
+
+.produk-card-text h3 {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.produk-card-text p {
+    font-size: 15px;
+}
+
+/* FOOTER */
+
+
+    footer {
+        background-color: #1f1f1f;
+        color: #fff;
+        padding: 60px 30px 20px 30px;
+        width: 100%;
+        overflow-x : hidden;
+        margin-top: 4rem;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 40px;
+        max-width: 1200px;
+        margin: auto;
+        overflow: hidden;
+    }
+
+    .footer-col {
+        flex: 1 1 200px;
+    }
+
+    .footer-logo {
+        color: #00bfa6;
+        font-weight: bold;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .footer-contact p {
+        margin: 6px 0;
+        font-size: 14px;
+        color: #ccc;
+    }
+
+    .footer-contact i {
+        margin-right: 6px;
+        color: #00bfa6;
+    }
+
+    .footer-title {
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .footer-links a {
+        display: block;
+        color: #ccc;
+        font-size: 14px;
+        text-decoration: none;
+        margin-bottom: 6px;
+        transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+        color: #00bfa6;
+    }
+
+    .footer-gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5px;
+    }
+
+    .footer-gallery img {
+        width: 100%;
+        height: auto;
+        border-radius: 4px;
+    }
+
+    .footer-bottom {
+        text-align: center;
+        font-size: 13px;
+        color: #999;
+        border-top: 1px solid #333;
+        padding: 20px 0 10px;
+        margin-top: 30px;
+        overflow-x: hidden;
+    }       
+
+
+
+
+@media only screen and (max-width: 1440px) {
+      /*NAVIGATION BAR*/
+
+    .navbar .navbar-ul {
+        margin-right: 100px;
+    }
+
+    .navbar .navbar-ul .navbar-li .navbar-link {
+        font-size: .9rem;
+    }
+
+    .logo {
+        margin-left: 200px;
+    }
+
+    .logo img {
+        width: 100px;
+    }
+
+    /* MAIN BORD */
+
+    .hero-section {
+        height: 450px;
+    }
+
+    /* SECTION LAYANAN */
+    .karya-text h5 {
+        font-size: .8rem;
+    }
+
+    .karya-text h2 {
+        font-size: 2rem;
+    }
+
+    .karya-text p {
+        font-size: .95rem;
+    }
+
+    .karya-image {
+        margin-left: 4rem;
+        margin-right: 3rem;
+    }
+
+    .karya-image img {
+        width: 420px;
+        height: 270px;
+    }
+
+}
+
+@media only screen and (max-width: 1025px) {
+       /*NAVIGATION BAR*/
+
+    .navbar .navbar-ul {
+        margin-right: 5px;
+    }
+
+    .logo {
+        margin-left: 20px;
+    }
+
+    /* MAIN BOARD */
+    .hero-content {
+        left: 5%;
+    }
+
+    .hero-content h1 {
+        font-size: 3.2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+        max-width: 400px;
+    }
+
+    .section-karya {
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        /* Posisi kontainer di tengah */
+        text-align: left;
+        /* Text di dalamnya rata kiri */
+        padding: 40px 20px;
+    }
+
+    .karya-text {
+        max-width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .section-karya {
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+        padding: 40px 20px;
+    }
+
+    .karya-text {
+        max-width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .karya-image {
+        margin: 0;
+    }
+
+    .karya-image {
+        margin: 0;
+    }
+
+    .karya-image img {
+        width: 750px;
+        height: 320px;
+        box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    }
+
+    /* HASIL PRODUK */
+
+    .produk-row-one .produk-card{
+        width: 530px;
+        height: 300px;
+    }
+
+    .produk-row-three .produk-card {
+        width: 240px;
+        height: 340px;
+    }
+
+    .produk-card {
+        width: 230px;
+        height: 330px;
+    }
+.produk-header {
+        max-width: 600px;
+    }
+
+    .produk-card {
+        width: 230px;
+        height: 330;
+    }
+
+    .step {
+        flex: 1 1 45%;
+        /* 2 kolom */
+        max-width: none;
+
+    }
+}
+
+@media only screen and (max-width: 768px) {
+      /*NAVIGATION BAR*/
+
+    .menu-icon {
+        align-items: center;
+        display: flex;
+    }
+
+    .logo img {
+        width: 70px;
+    }
+
+    .navbar .navbar-ul {
+        display: none;
+    }
+
+
+    /*RESPONSIVE NAVIGATION BAR */
+
+    .reponsive-navbar ul {
+        display: block;
+    }
+
+    .reponsive-navbar ul {
+        position: fixed;
+        width: 100%;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        margin-top: 8rem;
+        padding: 10px;
+        background-color: rgba(255, 255, 255, 0.9);
+        box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+        z-index: 998;
+    }
+
+    .reponsive-navbar ul {
+        list-style: none;
+        box-shadow: black;
+    }
+
+    .reponsive-navbar ul li {
+        margin: 2rem;
+    }
+
+    .reponsive-navbar ul li a {
+        text-decoration: none;
+        color: black;
+        justify-content: center;
+        display: flex;
+        font-weight: bold;
+        opacity: 60%;
+        font-family: "Poetsen One", sans-serif;
+    }
+
+    .reponsive-navbar ul li a {
+        position: relative;
+        overflow: hidden;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .reponsive-navbar ul li a:hover {
+        opacity: 100%;
+    }
+
+    /* MAIN BOARD */
+
+    .hero-content h1 {
+        font-size: 3.2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+        max-width: 400px;
+    }
+
+     /* SECTION LAYANAN */
+    .karya-image img {
+        width: 500px;
+        height: 290;
+    }
+
+    /*HASIL PRODUK*/
+    .produk-row {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .produk-card {
+        width: 75vw;
+        height: 40vw;
+    }
+
+    .produk-header h2 {
+        font-size: 22px;
+    }
+
+    .produk-header p {
+        font-size: 14px;
+    }
+
+    /*HASIL PRODUK*/
+    .produk-row-three {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .produk-row-three .produk-card {
+        width: 70vw;
+        height: 40vw;
+    }
+
+    .produk-row-one {
+        align-items: center;
+    }
+
+    .produk-row-one .produk-card {
+        width: 70vw;
+        height: 40vw;
+    }
+
+    .produk-row {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .produk-card {
+        width: 75vw;
+        height: 40vw;
+    }
+
+    .produk-header h2 {
+        font-size: 22px;
+    }
+
+    .produk-header p {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width:425px) {
+    /*SECTION LAYANAN */
+    .section-karya {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px 10px;
+        gap: 20px;
+    }
+
+    .karya-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .karya-text p {
+        font-size: 0.9rem;
+        max-width: 90%;
+        margin: 0 auto 10px auto;
+    }
+
+    .karya-image {
+        margin: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .karya-image img {
+        width: 90%;
+        max-width: 280px;
+        height: auto;
+        object-fit: cover;
+        box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    }
+    
+     /*HASIL PRODUK*/
+    .produk-header {
+        max-width: 90%;
+        text-align: left;
+        /* atau center jika diinginkan */
+        margin: 2rem auto;
+    }
+
+    .produk-header h5 {
+        font-size: 13px;
+    }
+
+    .produk-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .produk-header p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .produk-card-text h3 {
+        font-size: 17px;
+    }
+
+    .produk-card-text p {
+        font-size: 12px;
+    }
+
+    /* FOOTER */ 
+    footer {
+        padding: 60px 0px 20px 2px;
+    }
+}
+

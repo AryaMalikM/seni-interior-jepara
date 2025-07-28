@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="slider-style.css">
+    <link rel="stylesheet" href="slider.css">
+    <title>Galeri Produk</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+    <div class="product-card-main">
+        <div class="produk-grid-container">
+            <!-- Baris 1 -->
+            <div class="produk-row-three">
+                <div class="produk-card" onclick="openSlider('Kitchen Set', [
+                    'image/furniture dapur.jpeg',
+                    
+                ])">
+                    <img src="image/furniture dapur.jpeg" alt="Kitchen Set">
+                    <div class="produk-overlay"></div>
+                    <div class="produk-card-text">
+                        <h3>Kitchen Set</h3>
+                        <p>Desain kitchen set custom yang fungsional.</p>
+                    </div>
+                </div>
+
+                <div class="produk-card" onclick="openSlider('Ruang Tamu', [
+                    'image/product/ruang tamu.jpg',
+
+                ])">
+                    <img src="image/product/ruang tamu.jpg" alt="Living Room">
+                    <div class="produk-overlay"></div>
+                    <div class="produk-card-text">
+                        <h3>Ruang Tamu</h3>
+                        <p>Desain ruang tamu yang nyaman dan elegan.</p>
+                    </div>
+                </div>
+
+                <div class="produk-card" onclick="openSlider('Ruang Keluarga', [
+                    'image/product/Ruang keluarga.jpg',
+                 
+                ])">
+                    <img src="image/product/Ruang keluarga.jpg" alt="Family Room">
+                    <div class="produk-overlay"></div>
+                    <div class="produk-card-text">
+                        <h3>Ruang Keluarga</h3>
+                        <p>Ruang keluarga nyaman untuk berkumpul.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Baris 2 -->
+            <div class="produk-row-three">
+                <div class="produk-card" onclick="openSlider('Ruang Makan', [
+                    'image/product/ruang makan.jpg',
+
+                ])">
+                    <img src="image/product/ruang makan.jpg" alt="Dining Room">
+                    <div class="produk-overlay"></div>
+                    <div class="produk-card-text">
+                        <h3>Ruang Makan</h3>
+                        <p>Desain ruang makan elegan dan nyaman.</p>
+                    </div>
+                </div>
+
+                <div class="produk-card" onclick="openSlider('Kamar Tidur', [
+                    'image/product/Bedroom.jpg',
+                   
+                ])">
+                    <img src="image/product/Bedroom.jpg" alt="Bedroom">
+                    <div class="produk-overlay"></div>
+                    <div class="produk-card-text">
+                        <h3>Kamar Tidur</h3>
+                        <p>Kamar tidur nyaman dengan desain personal.</p>
+                    </div>
+                </div>
+
+                <div class="produk-card" onclick="openSlider('Apartemen', [
+                    'image/product/Apartemen.jpg',
+                   
+                ])">
+                    <img src="image/product/Apartemen.jpg" alt="Apartment">
+                    <div class="produk-overlay"></div>
+                    <div class="produk-card-text">
+                        <h3>Apartemen</h3>
+                        <p>Desain apartemen modern dan efisien.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Baris 3 -->
+            <div class="produk-row-one">
+                <div class="produk-card" onclick="openSlider('Perkantoran', [
+                    'image/product/interior kantor.jpg',
+                   
+                ])">
+                    <img src="image/product/interior kantor.jpg" alt="Office">
+                    <div class="produk-overlay"></div>
+                    <div class="produk-card-text">
+                        <h3>Perkantoran</h3>
+                        <p>Desain interior kantor profesional.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slider Modal -->
+    <div id="sliderModal" class="slider-modal">
+        <span class="close-slider" onclick="closeSlider()">&times;</span>
+        <div class="slider-content">
+            <div class="slider-nav prev-slide" onclick="changeSlide(-1)">&#10094;</div>
+            <div class="slider-images-container" id="sliderImages"></div>
+            <div class="slider-title" id="sliderTitle"></div>
+            <div class="slider-nav next-slide" onclick="changeSlide(1)">&#10095;</div>
+        </div>
+    </div>
+
+    <script src="slider.js">
+     
+    </script>
+</body>
+</html>
